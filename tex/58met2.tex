@@ -1,0 +1,27 @@
+\paragraph{Teori} \hfill \\
+Metoden tilnærmer hvilkensomhelst egenverdi,
+gitt at initialgjetning $\alpha$ er nærme nok $\lambda$.
+
+La $B = (A - \alpha I)^{-1}$ og bruk potensmetoden på B.
+
+Egenverdiene til A er $\lambda_1, ..., \lambda_n$,
+og egenverdiene til B er
+$\frac{1}{\lambda_1 - \alpha}, ..., \frac{1}{\lambda_n - \alpha}$.
+
+Egenverdiene til A vil ligge innenfor $[-|\lambda_1|, |\lambda_1|]$.
+
+
+
+\paragraph{Algoritme} \hfill \\
+\begin{enumerate}
+  \item Velg initialgjetning $\alpha$ nærme $\lambda$
+  \item Velg initialvektor $\vecx_0$ med største komponent 1.
+  \item For $k = 0,1,...$
+    \begin{enumerate}[label=\alph*]
+      \item Beregn $(A-\alpha I)\vecy_k = \vecx_k$
+      \item La $\mu_k$ være komponent i $\vecy_k$ med størst abs.
+      \item Beregn $v_k = \alpha + (1/\mu_k)$
+      \item Beregn $\vecx_{k+1} = (1/\mu_k)\vecy_k$
+    \end{enumerate}
+  \item $v_k \to \lambda$ og $\vecx_k \to \vecv$
+\end{enumerate}

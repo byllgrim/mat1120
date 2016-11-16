@@ -1,0 +1,34 @@
+\paragraph{Teori} \hfill \\
+Potensmetoden gjelder $n\times n$ matriser A
+med en \emph{Strengt dominant egenverdi}.
+$$|\lambda_1| > |\lambda_2| \geq ... \geq |\lambda_n|$$
+
+Vis ser på $\vecx$ skrevet som
+$$\vecx = c_1\vecv_1 + ... + c_n\vecv_n$$
+$$A^k\vecx = c_1(\lambda_1)^k\vecv_1 + ... + c_n(\lambda_n)^k\vecv_n$$
+Vi deler på den største egenverdien
+$$\frac{1}{(\lambda_1)^k} A^k \vecx
+  = c_1\vecv_1
+    + c_2\left(\frac{\lambda_2}{\lambda_1}\right)^k\vecv_2
+    + ...
+    + c_n\left(\frac{\lambda_n}{\lambda_1}\right)^k\vecv_n$$
+
+Fordi $\lambda_1$ er størst får man
+$$(\lambda_1)^{-k} A^k \vecx \to c_1\vecv_1,\quad k\to\infty$$
+
+Altså har vi at $A^k\vecx$ går i ca samme retning som $\vecv_1$.
+
+
+
+\paragraph{Algoritme} \hfill \\
+\begin{enumerate}
+  \item Vel initialvektor $\vecx_0$ med største komponent $1$.
+  \item For $k = 0,1,...$
+    \begin{enumerate}[label=\alph*]
+      \item Beregn $A\vecx_k$
+      \item La $\mu_k$ være komponenten i $A\vecx_k$ med størst abs.
+      \item Beregn $\vecx_{k+1} = (1/\mu_k)A\vecx_k$
+    \end{enumerate}
+  \item For nesten alle $\vecx_0$ vil
+        $\mu_k \to \lambda_1$ og $\vecx_k \to \vecv_1$
+\end{enumerate}
