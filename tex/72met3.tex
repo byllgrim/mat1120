@@ -1,0 +1,14 @@
+Hvis A ikke er diagonal kan det være lurt med variabelskifte.
+$$\vecx = P\vecy, \qquad \vecy = P^{-1} \vecx$$
+Her er $\vecy$ koordinatvektor til $\vecx$ for en basis $\B$,
+slik som i kpt 4.4.
+$$\vecx = P_\B [\vecx]_\B, \qquad P = [\vecb_1 \ ...\  \vecb_n]$$
+
+Kvadratisk form blir nå enklere
+$$\vecx^T A \vecx
+  = (P\vecy)^T A (P\vecy)
+  = \vecy^TP^T A P\vecy
+  = \vecy^T (P^T A P) \vecy$$
+
+Men A er symmetrisk så
+$$\vecx^T A \vecx = \vecy^T D \vecy$$
