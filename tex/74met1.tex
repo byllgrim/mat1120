@@ -1,0 +1,19 @@
+\paragraph{Ortogonalt diagonaliser $A^TA$} \hfill \\
+Finn egenverdiene og tilsvarende ortonormal mengde egenvektorer.
+
+\paragraph{Konstruer V} \hfill \\
+Sorter egenverdiene til $A^TA$ i synkende rekkefølge,
+og bruk tilsvarende egenvektorer som kolonner i V
+$$V = [\ \vecv_1\ \vecv_2\ ...\  \vecv_n \ ]$$
+
+\paragraph{Konstruer $\Sigma$} \hfill \\
+Bruk singulærverdiene og la
+$D = \text{diag}(\sigma_1 \geq ... \geq \sigma_r \geq 0)$.
+Konstruer $\Sigma$ til å være $m\times n$
+$$\Sigma = \begin{bmatrix} D & 0 \\ 0 & 0 \end{bmatrix}$$
+
+\paragraph{Konstruer U} \hfill \\
+Enten kan man bruke matrisemultiplikasjon og inverse for å finne U,
+eller så kan man bruke
+$$U = [\ \vecu_1\ \vecu_2\ ...\  \vecu_n \ ]$$
+$$\vecu_i = \frac{1}{\sigma_i}A\vecv_i$$
