@@ -1,0 +1,16 @@
+En enkel algoritme for å lage ortogonal eller ortonormal basis.
+
+Gitt en basis $\vecx_1, ..., \vecx_p$ for et underrom W.
+$$\vecv_1 = \vecx_1$$
+$$\vecv_2 = \vecx_2 - \frac{\vecx_2\cdot\vecv_1}{\vecv_1\cdot\vecv_1}\vecv_1$$
+$$\vecv_3 = \vecx_3
+  - \frac{\vecx_3\cdot\vecv_1}{\vecv_1\cdot\vecv_1}\vecv_1
+  - \frac{\vecx_3\cdot\vecv_2}{\vecv_2\cdot\vecv_2}\vecv_2$$
+$$\vdots$$
+$$\vecv_p = \vecx_p
+  - \frac{\vecx_p\cdot\vecv_1}{\vecv_1\cdot\vecv_1}\vecv_1
+  - \frac{\vecx_p\cdot\vecv_2}{\vecv_2\cdot\vecv_2}\vecv_2
+  - ...
+  - \frac{\vecx_p\cdot\vecv_{p-1}}{\vecv_{p-1}\cdot\vecv_{p-1}}\vecv_{p-1}$$
+Nå er $\vecv_1, ..., \vecv_p$ en ortogonal basis for W.
+$$\Span{\vecv_1, ..., \vecv_p} = \Span{\vecx_1, ..., \vecx_p}$$
