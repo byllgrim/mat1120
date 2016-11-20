@@ -1,0 +1,30 @@
+Gitt et set datapunkter $(x_1,y_1), ..., (x_m,y_m)$,
+så kan man finne en lineærkombinasjon av funksjoner $f_1, ..., f_n$
+som best passer punktene.
+$$y = \beta_1f_1 + \beta_2f_2 + ... + \beta_nf_n$$
+Dette gjøres ved å finne vektene $\beta_1, ..., \beta_n$
+fra ligningen $X\vecB=\vecy$.
+
+$$\begin{bmatrix}
+    f_1(x_1) & f_2(x_1) & ... & f_n(x_1) \\
+    f_1(x_2) & f_2(x_2) & ... & f_n(x_2) \\
+             &          & ... &          \\
+    f_1(x_m) & f_2(x_m) & ... & f_n(x_m)
+  \end{bmatrix}
+  \begin{bmatrix}
+    \beta_1 \\
+    \beta_2 \\
+    ...     \\
+    \beta_n
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    y_1 \\
+    y_2 \\
+    ...     \\
+    y_m
+  \end{bmatrix}
+$$
+
+Funksjonene kan være hva man vil.
+F.eks. $f_1(x) = 1$ og $f_2(x) = x$ for en lineær regresjon.
